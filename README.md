@@ -1,4 +1,5 @@
-Code for PA 01 for CS 103, Prof Tim Hickey
+Code for PA 01 for CS 103
+Instructor: Tim Hickey
 Team 14 group members:
  1. Jason Fan  (jasonfan@brandeis.edu)
  2. Tenzin Dasel (tenzidasel@brandeis.edu)
