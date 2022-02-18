@@ -3,8 +3,8 @@ course_search is a Python script using a terminal based menu to help
 students search for courses they might want to take at Brandeis
 '''
 # testing
-from pa01.schedule import Schedule # debugging due to import paths
-#from schedule import Schedule
+#from pa01.schedule import Schedule # debugging due to import paths
+from schedule import Schedule
 import sys
 
 schedule = Schedule()
