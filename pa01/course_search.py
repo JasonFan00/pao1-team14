@@ -54,7 +54,7 @@ def topmenu():
             phrase = input("Enter a phrase: ")
             schedule = schedule.description(phrase)
         elif command in ['i','instructor']:
-            user_input = input("enter instructor:")
+            user_input = input("enter instructor email or lastname:")
             by_email = schedule.email([user_input])
             by_lastname = schedule.lastname([user_input])
             schedule = Schedule(by_email.courses + by_lastname.courses)
