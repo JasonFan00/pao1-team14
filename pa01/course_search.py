@@ -55,10 +55,14 @@ def topmenu():
             schedule = schedule.description(phrase)
         elif command in ['i','instructor']:
             user_input = input("enter instructor:")
-            schedule = schedule.email([user_input])
+            by_email = schedule.email([user_input])
+            by_lastname = schedule.lastname([user_input])
+            schedule = Schedule(by_email.courses + by_lastname.courses)
         elif command in ['c', 'course']:
             user_input = input("enter the course or course num:")
-            schedule = schedule.subject([user_input])
+            by_subject = schedule.subject([user_input])
+            by_coursenum = schedule.subject([user_input])
+            schedule = Schedule(by_subject.courses + by_coursenum.courses)
         elif command in ['t', 'titlephrase']:
             phrase = input("enter a phrase in title:")
             schedule = schedule.title(phrase)
