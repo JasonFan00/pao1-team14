@@ -53,6 +53,12 @@ def topmenu():
             '''created by Gisel'''
             phrase = input("Enter a phrase: ")
             schedule = schedule.description(phrase)
+        elif command in ['i','instructor']:
+            email_input = input("enter instructor:")
+            schedule = schedule.email([email_input])
+        elif command in ['c', 'course']:
+            subject = input("enter the course name:")
+            schedule = schedule.course([subject])
         else:
             print('command', command, 'is not supported')
             continue
@@ -62,6 +68,7 @@ def topmenu():
         for course in schedule.courses[:10]:
             print_course(course)
         print('\n'*3)
+
 
 
 def print_course(course):
