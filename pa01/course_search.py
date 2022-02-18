@@ -61,7 +61,7 @@ def topmenu():
         elif command in ['c', 'course']:
             user_input = input("enter the course or course num:")
             by_subject = schedule.subject([user_input])
-            by_coursenum = schedule.subject([user_input])
+            by_coursenum = schedule.coursenum([user_input])
             schedule = Schedule(by_subject.courses + by_coursenum.courses)
         elif command in ['t', 'titlephrase']:
             phrase = input("enter a phrase in title:")
