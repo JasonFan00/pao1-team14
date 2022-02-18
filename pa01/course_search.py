@@ -51,7 +51,7 @@ def topmenu():
             schedule = schedule.subject([subject])
         elif command in ['d', 'description']:
             '''created by Gisel'''
-            phrase = input("Enter a phrase: ")
+            phrase = input("Enter a phrase - ")
             schedule = schedule.description(phrase)
         elif command in ['i','instructor']:
             user_input = input("enter instructor email or lastname:")
