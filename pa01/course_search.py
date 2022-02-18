@@ -54,11 +54,17 @@ def topmenu():
             phrase = input("Enter a phrase: ")
             schedule = schedule.description(phrase)
         elif command in ['i','instructor']:
-            email_input = input("enter instructor:")
-            schedule = schedule.email([email_input])
+            user_input = input("enter instructor:")
+            schedule = schedule.email([user_input])
         elif command in ['c', 'course']:
-            subject = input("enter the course name:")
-            schedule = schedule.course([subject])
+            user_input = input("enter the course or course num:")
+            schedule = schedule.subject([user_input])
+        elif command in ['t', 'titlephrase']:
+            phrase = input("enter a phrase in title:")
+            schedule = schedule.title(phrase)
+        elif command in ['l', 'lessThan50']:
+            subject = input("enter a course:") 
+            schedule = schedule.lessThan50([course])
         else:
             print('command', command, 'is not supported')
             continue

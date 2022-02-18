@@ -27,6 +27,7 @@ class Schedule():
         # making it a tuple means it is immutable
         self.courses = tuple(courses)
 
+
     def title(self, phrase):
         '''Returns courses containing the phrase in their title'''
         return Schedule([course for course in self.courses if phrase in course['name']])
@@ -59,9 +60,24 @@ class Schedule():
         ''' subject filters the courses by subject '''
         return Schedule([course for course in self.courses if course['subject'] in subjects])
 
+
+    def coursenum(self, coursenums):
+        ''' subject filters the courses by subject '''
+        return Schedule([course for course in self.courses if course['coursenum'] in coursenums])
+
+
+
     def sort(self, field):
         if field == 'subject':
             return Schedule(sorted(self.courses, key=lambda course: course['subject']))
         else:
             print("can't sort by "+str(field)+" yet")
             return self
+
+    '''
+    #7e. 
+    list enrollments less than 50 
+    '''
+    def lessThan50(self, course):
+        ''' enrolled filters for enrollment numbers in the list of vals'''
+        return Schedule([course for course in self.courses if course['enrolled'] < 50])
