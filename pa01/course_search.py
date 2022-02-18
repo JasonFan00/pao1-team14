@@ -32,6 +32,7 @@ def topmenu():
     '''
     global schedule
     while True:
+        schedule.load_courses()
         command = input(">> (h for help) ")
         if command == 'quit':
             return
@@ -40,7 +41,6 @@ def topmenu():
             print('-'*40+'\n\n')
             continue
         elif command in ['r', 'reset']:
-            schedule.load_courses()
             schedule = schedule.enrolled(range(5, 1000))
             continue
         elif command in ['t', 'term']:
