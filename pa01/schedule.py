@@ -18,7 +18,7 @@ class Schedule():
     def load_courses(self):
         ''' load_courses reads the course data from the courses.json file'''
         print('getting archived regdata from file')
-        with open("courses20-21.json", "r", encoding='utf-8') as jsonfile:
+        with open("pa01/courses20-21.json", "r", encoding='utf-8') as jsonfile:
             courses = json.load(jsonfile)
         for course in courses:
             course['instructor'] = tuple(course['instructor'])
@@ -30,6 +30,8 @@ class Schedule():
 
     def title(self, phrase):
         '''Returns courses containing the phrase in their title'''
+        x = 10
+        print(x)
         return Schedule([course for course in self.courses if phrase in course['name']])
 
     def description(self, phrase):
