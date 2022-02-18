@@ -58,7 +58,6 @@ class Schedule():
 
     def subject(self, subjects):
         ''' subject filters the courses by subject '''
-        print(subjects)
         return Schedule([course for course in self.courses if course['subject'] in subjects])
 
 
