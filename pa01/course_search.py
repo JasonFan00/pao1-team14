@@ -49,6 +49,10 @@ def topmenu():
         elif command in ['s', 'subject']:
             subject = input("enter a subject:")
             schedule = schedule.subject([subject])
+        elif command in ['d', 'description']:
+            '''created by Gisel'''
+            phrase = input("Enter a phrase: ")
+            schedule = schedule.description(phrase)
         else:
             print('command', command, 'is not supported')
             continue
