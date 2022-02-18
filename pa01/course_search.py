@@ -2,7 +2,7 @@
 course_search is a Python script using a terminal based menu to help
 students search for courses they might want to take at Brandeis
 '''
-
+#testing
 from schedule import Schedule
 import sys
 
@@ -29,7 +29,7 @@ def topmenu():
     topmenu is the top level loop of the course search app
     '''
     global schedule
-    while True:         
+    while True:
         command = input(">> (h for help) ")
         if command=='quit':
             return
@@ -62,13 +62,17 @@ def topmenu():
 
 def print_course(course):
     '''
-    print_course prints a brief description of the course 
+    print_course prints a brief description of the course
     '''
     print(course['subject'],course['coursenum'],course['section'],
           course['name'],course['term'],course['instructor'])
 
+
+
+
 if __name__ == '__main__':
     topmenu()
+<<<<<<< HEAD
 
 
     '''
@@ -81,3 +85,5 @@ d. description -- filter by phrase in the description
 e. Create your own filter (each team member creates their own)
 
     '''
+=======
+>>>>>>> 90033cd6006fa59d52f8e2a13e016a1499ec9693

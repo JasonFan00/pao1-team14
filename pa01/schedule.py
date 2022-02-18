@@ -23,6 +23,18 @@ class Schedule():
             course['coinstructors'] = [tuple(f) for f in course['coinstructors']]
         self.courses = tuple(courses)  # making it a tuple means it is immutable
 
+    def title(self, phrase):
+        '''Returns courses containing the phrase in their title'''
+        return Schedule([course for course in self.courses if phrase in course['name']])
+
+    def description(self, phrase):
+        '''Returns courses containing the phrase in description'''
+        return Schedule([course for course in self.courses if phrase in course['description']])
+    
+    def waitlist_count(self, waiting):
+        '''Returns courses that have <= people waiting'''
+        return Schedule([course for course in self.courses if course['enrolled'] <= waiting])
+
     def lastname(self,names):
         ''' lastname returns the courses by a particular instructor last name'''
         return Schedule([course for course in self.courses if course['instructor'][1] in names])
