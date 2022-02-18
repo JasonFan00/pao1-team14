@@ -49,4 +49,19 @@ class Schedule():
         else:
             print("can't sort by "+str(field)+" yet")
             return self
+    '''
+    #7c. 
+    course  -- title -- filter by phrase in the title
+    '''
+    def courseNum_Sub(self, title):
+        ''' enrolled filters for enrollment numbers in the list of vals'''
+            return Schedule([course for course in self.courses if course['enrolled'] < 50])
+        
+    '''
+    #7e. 
+    list enrollments less than 50 
+    '''
+    def lessThan50(self, course):
+         ''' enrolled filters for enrollment numbers in the list of vals'''
+        return Schedule([course for course in self.courses if course['enrolled'] < 50])
  
